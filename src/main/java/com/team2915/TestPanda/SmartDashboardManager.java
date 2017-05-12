@@ -1,5 +1,6 @@
 package com.team2915.TestPanda;
 
+import com.team2915.TestPanda.util.VisionTarget;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -17,5 +18,9 @@ public class SmartDashboardManager {
     public void updateSmartDashboard() {
         SmartDashboard.putBoolean("Did we copy 254?", true); //Example for Andrew
         SmartDashboard.putNumber("PDP Voltage", pdp.getVoltage());
+    }
+
+    public VisionTarget getBestGoal(){
+        return new VisionTarget(SmartDashboard.getNumber("distance", -1337.0), SmartDashboard.getNumber("goal", -1337.0));
     }
 }
