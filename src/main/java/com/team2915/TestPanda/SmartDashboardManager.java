@@ -12,6 +12,6 @@ public class SmartDashboardManager {
     }
 
     public void updateSmartDashboard(){
-        
+        SmartDashboard.putBoolean("Did we copy 254?", true); //Example for Andrew
     }
 }
