@@ -1,6 +1,7 @@
 package com.team2915.TestPanda;
 
 import edu.wpi.first.wpilibj.GenericHID;
+import edu.wpi.first.wpilibj.PowerDistributionPanel;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
@@ -8,10 +9,13 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class SmartDashboardManager {
 
-    public SmartDashboardManager(){
+    PowerDistributionPanel pdp = new PowerDistributionPanel();
+
+    public SmartDashboardManager() {
     }
 
-    public void updateSmartDashboard(){
+    public void updateSmartDashboard() {
         SmartDashboard.putBoolean("Did we copy 254?", true); //Example for Andrew
+        SmartDashboard.putNumber("PDP Voltage", pdp.getVoltage());
     }
 }
