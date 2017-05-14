@@ -1,7 +1,5 @@
 language: java
-install:
-  - gradle wpi
 script:
-  - gradle
+  - gradle build
 jdk:
   - oraclejdk8
